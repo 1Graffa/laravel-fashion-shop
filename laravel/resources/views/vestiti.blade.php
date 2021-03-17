@@ -3,7 +3,14 @@
 @section('titolo','vestiti')
 
 @section('content')
-<h1>Vestiti</h1>
 
+@foreach($vestiti as $vestito)
+<div>
+    <h2>{{ ($vestito->modello) }}</h2>
+    <h2>{{ ($vestito->taglia) }}</h2>
+    <h2>{{ ($vestito->colore) }}</h2>
+</div>
+<hr>
+@endforeach
 
 @endsection
