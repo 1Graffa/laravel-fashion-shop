@@ -15,8 +15,11 @@ class HomeController extends Controller
     }
 
     public function vestiti(){
-        
-        return view('vestiti');
+        $vestiti = dress::All();
+        $data = [
+            'dresses' => $vestiti
+        ];
+        return view('vestiti',$data);
     }
     public function contatti(){
         $data = [
